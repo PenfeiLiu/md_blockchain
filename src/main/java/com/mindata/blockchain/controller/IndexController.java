@@ -61,7 +61,7 @@ public class IndexController {
         InstructionBody instructionBody = new InstructionBody();
         instructionBody.setOperation(Operation.ADD);
         instructionBody.setTable("user");
-        instructionBody.setJson("{\"name\":\"" + "55555" + "\"}");
+        instructionBody.setJson("{\"name\":\"" + "666" + "\",\"password\":\""+"1234"+"\"}");
         /*instructionBody.setPublicKey("A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54");
         instructionBody.setPrivateKey("yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=");*/
         instructionBody.setPublicKey(publicKey);
