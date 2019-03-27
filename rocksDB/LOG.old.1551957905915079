@@ -1,0 +1,181 @@
+2019/03/07-19:24:46.403766 2dfc RocksDB version: 5.10.3
+2019/03/07-19:24:46.404719 2dfc Git sha rocksdb_build_git_sha:@ac329cce6e4b482d086cc9c8fa1689914a753a36@
+2019/03/07-19:24:46.405227 2dfc Compile date Feb 26 2018
+2019/03/07-19:24:46.405433 2dfc DB SUMMARY
+2019/03/07-19:24:46.407222 2dfc CURRENT file:  CURRENT
+2019/03/07-19:24:46.407605 2dfc IDENTITY file:  IDENTITY
+2019/03/07-19:24:46.408085 2dfc MANIFEST file:  MANIFEST-000014 size: 59 Bytes
+2019/03/07-19:24:46.408517 2dfc SST files in ./rocksDB dir, Total Num: 0, files: 
+2019/03/07-19:24:46.408685 2dfc Write Ahead Log file in ./rocksDB: 000015.log size: 0 ; 
+2019/03/07-19:24:46.408788 2dfc                         Options.error_if_exists: 0
+2019/03/07-19:24:46.408945 2dfc                       Options.create_if_missing: 1
+2019/03/07-19:24:46.409860 2dfc                         Options.paranoid_checks: 1
+2019/03/07-19:24:46.409991 2dfc                                     Options.env: 0000000000F79730
+2019/03/07-19:24:46.410074 2dfc                                Options.info_log: 000000001D6C99E0
+2019/03/07-19:24:46.410109 2dfc                Options.max_file_opening_threads: 16
+2019/03/07-19:24:46.410148 2dfc                              Options.statistics: 0000000000000000
+2019/03/07-19:24:46.410188 2dfc                               Options.use_fsync: 0
+2019/03/07-19:24:46.410213 2dfc                       Options.max_log_file_size: 0
+2019/03/07-19:24:46.410250 2dfc                  Options.max_manifest_file_size: 18446744073709551615
+2019/03/07-19:24:46.410284 2dfc                   Options.log_file_time_to_roll: 0
+2019/03/07-19:24:46.410369 2dfc                       Options.keep_log_file_num: 1000
+2019/03/07-19:24:46.410394 2dfc                    Options.recycle_log_file_num: 0
+2019/03/07-19:24:46.410423 2dfc                         Options.allow_fallocate: 1
+2019/03/07-19:24:46.410476 2dfc                        Options.allow_mmap_reads: 0
+2019/03/07-19:24:46.410511 2dfc                       Options.allow_mmap_writes: 0
+2019/03/07-19:24:46.410567 2dfc                        Options.use_direct_reads: 0
+2019/03/07-19:24:46.410625 2dfc                        Options.use_direct_io_for_flush_and_compaction: 0
+2019/03/07-19:24:46.410698 2dfc          Options.create_missing_column_families: 0
+2019/03/07-19:24:46.410799 2dfc                              Options.db_log_dir: 
+2019/03/07-19:24:46.410957 2dfc                                 Options.wal_dir: ./rocksDB
+2019/03/07-19:24:46.411139 2dfc                Options.table_cache_numshardbits: 6
+2019/03/07-19:24:46.411263 2dfc                      Options.max_subcompactions: 1
+2019/03/07-19:24:46.411333 2dfc                  Options.max_background_flushes: -1
+2019/03/07-19:24:46.411381 2dfc                         Options.WAL_ttl_seconds: 0
+2019/03/07-19:24:46.411459 2dfc                       Options.WAL_size_limit_MB: 0
+2019/03/07-19:24:46.411564 2dfc             Options.manifest_preallocation_size: 4194304
+2019/03/07-19:24:46.411711 2dfc                     Options.is_fd_close_on_exec: 1
+2019/03/07-19:24:46.411941 2dfc                   Options.advise_random_on_open: 1
+2019/03/07-19:24:46.412144 2dfc                    Options.db_write_buffer_size: 0
+2019/03/07-19:24:46.412371 2dfc                    Options.write_buffer_manager: 000000001D6CAF80
+2019/03/07-19:24:46.412609 2dfc         Options.access_hint_on_compaction_start: 1
+2019/03/07-19:24:46.412785 2dfc  Options.new_table_reader_for_compaction_inputs: 0
+2019/03/07-19:24:46.412947 2dfc           Options.random_access_max_buffer_size: 1048576
+2019/03/07-19:24:46.413129 2dfc                      Options.use_adaptive_mutex: 0
+2019/03/07-19:24:46.413788 2dfc                            Options.rate_limiter: 0000000000000000
+2019/03/07-19:24:46.414283 2dfc     Options.sst_file_manager.rate_bytes_per_sec: 0
+2019/03/07-19:24:46.414392 2dfc                       Options.wal_recovery_mode: 2
+2019/03/07-19:24:46.414446 2dfc                  Options.enable_thread_tracking: 0
+2019/03/07-19:24:46.414491 2dfc                  Options.enable_pipelined_write: 0
+2019/03/07-19:24:46.414533 2dfc         Options.allow_concurrent_memtable_write: 1
+2019/03/07-19:24:46.414912 2dfc      Options.enable_write_thread_adaptive_yield: 1
+2019/03/07-19:24:46.415148 2dfc             Options.write_thread_max_yield_usec: 100
+2019/03/07-19:24:46.415223 2dfc            Options.write_thread_slow_yield_usec: 3
+2019/03/07-19:24:46.415290 2dfc                               Options.row_cache: None
+2019/03/07-19:24:46.415360 2dfc                              Options.wal_filter: None
+2019/03/07-19:24:46.415452 2dfc             Options.avoid_flush_during_recovery: 0
+2019/03/07-19:24:46.415541 2dfc             Options.allow_ingest_behind: 0
+2019/03/07-19:24:46.415617 2dfc             Options.preserve_deletes: 0
+2019/03/07-19:24:46.415698 2dfc             Options.two_write_queues: 0
+2019/03/07-19:24:46.415763 2dfc             Options.manual_wal_flush: 0
+2019/03/07-19:24:46.416244 2dfc             Options.max_background_jobs: 2
+2019/03/07-19:24:46.416342 2dfc             Options.max_background_compactions: -1
+2019/03/07-19:24:46.416386 2dfc             Options.avoid_flush_during_shutdown: 0
+2019/03/07-19:24:46.416424 2dfc           Options.writable_file_max_buffer_size: 1048576
+2019/03/07-19:24:46.416476 2dfc             Options.delayed_write_rate : 16777216
+2019/03/07-19:24:46.416648 2dfc             Options.max_total_wal_size: 0
+2019/03/07-19:24:46.416675 2dfc             Options.delete_obsolete_files_period_micros: 21600000000
+2019/03/07-19:24:46.416693 2dfc                   Options.stats_dump_period_sec: 600
+2019/03/07-19:24:46.416713 2dfc                          Options.max_open_files: -1
+2019/03/07-19:24:46.416735 2dfc                          Options.bytes_per_sync: 0
+2019/03/07-19:24:46.416766 2dfc                      Options.wal_bytes_per_sync: 0
+2019/03/07-19:24:46.416788 2dfc       Options.compaction_readahead_size: 0
+2019/03/07-19:24:46.416815 2dfc Compression algorithms supported:
+2019/03/07-19:24:46.417151 2dfc 	Snappy supported: 0
+2019/03/07-19:24:46.417198 2dfc 	Zlib supported: 0
+2019/03/07-19:24:46.417219 2dfc 	Bzip supported: 0
+2019/03/07-19:24:46.417241 2dfc 	LZ4 supported: 0
+2019/03/07-19:24:46.417265 2dfc 	ZSTDNotFinal supported: 0
+2019/03/07-19:24:46.417291 2dfc 	ZSTD supported: 0
+2019/03/07-19:24:46.417422 2dfc Fast CRC32 supported: Supported on x86
+2019/03/07-19:24:46.420333 2dfc [c:\users\aretter\code\rocksdb\db\version_set.cc:2834] Recovering from manifest file: MANIFEST-000014
+2019/03/07-19:24:46.420474 2dfc [c:\users\aretter\code\rocksdb\db\column_family.cc:431] --------------- Options for column family [default]:
+2019/03/07-19:24:46.420503 2dfc               Options.comparator: leveldb.BytewiseComparator
+2019/03/07-19:24:46.420521 2dfc           Options.merge_operator: None
+2019/03/07-19:24:46.420539 2dfc        Options.compaction_filter: None
+2019/03/07-19:24:46.420557 2dfc        Options.compaction_filter_factory: None
+2019/03/07-19:24:46.420574 2dfc         Options.memtable_factory: SkipListFactory
+2019/03/07-19:24:46.420591 2dfc            Options.table_factory: BlockBasedTable
+2019/03/07-19:24:46.420665 2dfc            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000000000F57920)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 0
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  index_type: 0
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 000000001D4D80C0
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 8388608
+    num_shard_bits : 4
+    strict_capacity_limit : 0
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 2
+2019/03/07-19:24:46.420689 2dfc        Options.write_buffer_size: 67108864
+2019/03/07-19:24:46.420708 2dfc  Options.max_write_buffer_number: 2
+2019/03/07-19:24:46.420782 2dfc          Options.compression: NoCompression
+2019/03/07-19:24:46.420805 2dfc                  Options.bottommost_compression: Disabled
+2019/03/07-19:24:46.420824 2dfc       Options.prefix_extractor: nullptr
+2019/03/07-19:24:46.420869 2dfc   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2019/03/07-19:24:46.420893 2dfc             Options.num_levels: 7
+2019/03/07-19:24:46.420911 2dfc        Options.min_write_buffer_number_to_merge: 1
+2019/03/07-19:24:46.420928 2dfc     Options.max_write_buffer_number_to_maintain: 0
+2019/03/07-19:24:46.420947 2dfc            Options.compression_opts.window_bits: -14
+2019/03/07-19:24:46.420965 2dfc                  Options.compression_opts.level: -1
+2019/03/07-19:24:46.420984 2dfc               Options.compression_opts.strategy: 0
+2019/03/07-19:24:46.421002 2dfc         Options.compression_opts.max_dict_bytes: 0
+2019/03/07-19:24:46.421021 2dfc      Options.level0_file_num_compaction_trigger: 4
+2019/03/07-19:24:46.421040 2dfc          Options.level0_slowdown_writes_trigger: 20
+2019/03/07-19:24:46.421058 2dfc              Options.level0_stop_writes_trigger: 36
+2019/03/07-19:24:46.421077 2dfc                   Options.target_file_size_base: 67108864
+2019/03/07-19:24:46.421097 2dfc             Options.target_file_size_multiplier: 1
+2019/03/07-19:24:46.421114 2dfc                Options.max_bytes_for_level_base: 268435456
+2019/03/07-19:24:46.421133 2dfc Options.level_compaction_dynamic_level_bytes: 0
+2019/03/07-19:24:46.421151 2dfc          Options.max_bytes_for_level_multiplier: 10.000000
+2019/03/07-19:24:46.421180 2dfc Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2019/03/07-19:24:46.421198 2dfc Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2019/03/07-19:24:46.421214 2dfc Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2019/03/07-19:24:46.421232 2dfc Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2019/03/07-19:24:46.421249 2dfc Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2019/03/07-19:24:46.421266 2dfc Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2019/03/07-19:24:46.421283 2dfc Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2019/03/07-19:24:46.421299 2dfc       Options.max_sequential_skip_in_iterations: 8
+2019/03/07-19:24:46.421316 2dfc                    Options.max_compaction_bytes: 1677721600
+2019/03/07-19:24:46.421334 2dfc                        Options.arena_block_size: 8388608
+2019/03/07-19:24:46.421351 2dfc   Options.soft_pending_compaction_bytes_limit: 68719476736
+2019/03/07-19:24:46.421368 2dfc   Options.hard_pending_compaction_bytes_limit: 274877906944
+2019/03/07-19:24:46.421385 2dfc       Options.rate_limit_delay_max_milliseconds: 100
+2019/03/07-19:24:46.421402 2dfc                Options.disable_auto_compactions: 0
+2019/03/07-19:24:46.421420 2dfc                        Options.compaction_style: kCompactionStyleLevel
+2019/03/07-19:24:46.421439 2dfc                          Options.compaction_pri: kByCompensatedSize
+2019/03/07-19:24:46.421457 2dfc Options.compaction_options_universal.size_ratio: 1
+2019/03/07-19:24:46.421475 2dfc Options.compaction_options_universal.min_merge_width: 2
+2019/03/07-19:24:46.421493 2dfc Options.compaction_options_universal.max_merge_width: 4294967295
+2019/03/07-19:24:46.421510 2dfc Options.compaction_options_universal.max_size_amplification_percent: 200
+2019/03/07-19:24:46.421527 2dfc Options.compaction_options_universal.compression_size_percent: -1
+2019/03/07-19:24:46.421544 2dfc Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2019/03/07-19:24:46.421562 2dfc Options.compaction_options_fifo.max_table_files_size: 1073741824
+2019/03/07-19:24:46.421579 2dfc Options.compaction_options_fifo.allow_compaction: 0
+2019/03/07-19:24:46.421595 2dfc Options.compaction_options_fifo.ttl: 0
+2019/03/07-19:24:46.421613 2dfc                   Options.table_properties_collectors: 
+2019/03/07-19:24:46.421631 2dfc                   Options.inplace_update_support: 0
+2019/03/07-19:24:46.421648 2dfc                 Options.inplace_update_num_locks: 10000
+2019/03/07-19:24:46.421668 2dfc               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2019/03/07-19:24:46.421687 2dfc   Options.memtable_huge_page_size: 0
+2019/03/07-19:24:46.421705 2dfc                           Options.bloom_locality: 0
+2019/03/07-19:24:46.421723 2dfc                    Options.max_successive_merges: 0
+2019/03/07-19:24:46.421742 2dfc                Options.optimize_filters_for_hits: 0
+2019/03/07-19:24:46.421758 2dfc                Options.paranoid_file_checks: 0
+2019/03/07-19:24:46.421775 2dfc                Options.force_consistency_checks: 0
+2019/03/07-19:24:46.421792 2dfc                Options.report_bg_io_stats: 0
+2019/03/07-19:24:46.423164 2dfc [c:\users\aretter\code\rocksdb\db\version_set.cc:3100] Recovered from manifest file:./rocksDB/MANIFEST-000014 succeeded,manifest_file_number is 14, next_file_number is 16, last_sequence is 0, log_number is 0,prev_log_number is 0,max_column_family is 0
+2019/03/07-19:24:46.423199 2dfc [c:\users\aretter\code\rocksdb\db\version_set.cc:3108] Column family [default] (ID 0), log number is 13
+2019/03/07-19:24:46.423479 2dfc EVENT_LOG_v1 {"time_micros": 1551957886423428, "job": 1, "event": "recovery_started", "log_files": [15]}
+2019/03/07-19:24:46.423514 2dfc [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:518] Recovering log #15 mode 2
+2019/03/07-19:24:46.423646 2dfc [c:\users\aretter\code\rocksdb\db\version_set.cc:2609] Creating manifest 17
+2019/03/07-19:24:46.517226 2dfc EVENT_LOG_v1 {"time_micros": 1551957886517215, "job": 1, "event": "recovery_finished"}
+2019/03/07-19:24:46.563437 2dfc [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:1165] DB pointer 000000001D541010

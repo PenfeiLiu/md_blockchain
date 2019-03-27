@@ -1,0 +1,183 @@
+2019/03/07-19:45:59.954773 2a64 RocksDB version: 5.10.3
+2019/03/07-19:45:59.954930 2a64 Git sha rocksdb_build_git_sha:@ac329cce6e4b482d086cc9c8fa1689914a753a36@
+2019/03/07-19:45:59.954994 2a64 Compile date Feb 26 2018
+2019/03/07-19:45:59.955052 2a64 DB SUMMARY
+2019/03/07-19:45:59.955693 2a64 CURRENT file:  CURRENT
+2019/03/07-19:45:59.955800 2a64 IDENTITY file:  IDENTITY
+2019/03/07-19:45:59.955867 2a64 MANIFEST file:  MANIFEST-000020 size: 59 Bytes
+2019/03/07-19:45:59.955942 2a64 SST files in ./rocksDB dir, Total Num: 0, files: 
+2019/03/07-19:45:59.956008 2a64 Write Ahead Log file in ./rocksDB: 000021.log size: 0 ; 
+2019/03/07-19:45:59.956057 2a64                         Options.error_if_exists: 0
+2019/03/07-19:45:59.956137 2a64                       Options.create_if_missing: 1
+2019/03/07-19:45:59.956972 2a64                         Options.paranoid_checks: 1
+2019/03/07-19:45:59.957020 2a64                                     Options.env: 000000000130DA60
+2019/03/07-19:45:59.957154 2a64                                Options.info_log: 000000001D9BFDD0
+2019/03/07-19:45:59.957177 2a64                Options.max_file_opening_threads: 16
+2019/03/07-19:45:59.957194 2a64                              Options.statistics: 0000000000000000
+2019/03/07-19:45:59.957211 2a64                               Options.use_fsync: 0
+2019/03/07-19:45:59.957227 2a64                       Options.max_log_file_size: 0
+2019/03/07-19:45:59.957244 2a64                  Options.max_manifest_file_size: 18446744073709551615
+2019/03/07-19:45:59.957261 2a64                   Options.log_file_time_to_roll: 0
+2019/03/07-19:45:59.957294 2a64                       Options.keep_log_file_num: 1000
+2019/03/07-19:45:59.957333 2a64                    Options.recycle_log_file_num: 0
+2019/03/07-19:45:59.957350 2a64                         Options.allow_fallocate: 1
+2019/03/07-19:45:59.957366 2a64                        Options.allow_mmap_reads: 0
+2019/03/07-19:45:59.957383 2a64                       Options.allow_mmap_writes: 0
+2019/03/07-19:45:59.957427 2a64                        Options.use_direct_reads: 0
+2019/03/07-19:45:59.957444 2a64                        Options.use_direct_io_for_flush_and_compaction: 0
+2019/03/07-19:45:59.957462 2a64          Options.create_missing_column_families: 0
+2019/03/07-19:45:59.957494 2a64                              Options.db_log_dir: 
+2019/03/07-19:45:59.957511 2a64                                 Options.wal_dir: ./rocksDB
+2019/03/07-19:45:59.957527 2a64                Options.table_cache_numshardbits: 6
+2019/03/07-19:45:59.957543 2a64                      Options.max_subcompactions: 1
+2019/03/07-19:45:59.957560 2a64                  Options.max_background_flushes: -1
+2019/03/07-19:45:59.957577 2a64                         Options.WAL_ttl_seconds: 0
+2019/03/07-19:45:59.957593 2a64                       Options.WAL_size_limit_MB: 0
+2019/03/07-19:45:59.957609 2a64             Options.manifest_preallocation_size: 4194304
+2019/03/07-19:45:59.957626 2a64                     Options.is_fd_close_on_exec: 1
+2019/03/07-19:45:59.957642 2a64                   Options.advise_random_on_open: 1
+2019/03/07-19:45:59.957659 2a64                    Options.db_write_buffer_size: 0
+2019/03/07-19:45:59.957675 2a64                    Options.write_buffer_manager: 000000001DA0C620
+2019/03/07-19:45:59.957692 2a64         Options.access_hint_on_compaction_start: 1
+2019/03/07-19:45:59.957708 2a64  Options.new_table_reader_for_compaction_inputs: 0
+2019/03/07-19:45:59.957725 2a64           Options.random_access_max_buffer_size: 1048576
+2019/03/07-19:45:59.957741 2a64                      Options.use_adaptive_mutex: 0
+2019/03/07-19:45:59.957759 2a64                            Options.rate_limiter: 0000000000000000
+2019/03/07-19:45:59.957795 2a64     Options.sst_file_manager.rate_bytes_per_sec: 0
+2019/03/07-19:45:59.957812 2a64                       Options.wal_recovery_mode: 2
+2019/03/07-19:45:59.957842 2a64                  Options.enable_thread_tracking: 0
+2019/03/07-19:45:59.957878 2a64                  Options.enable_pipelined_write: 0
+2019/03/07-19:45:59.957918 2a64         Options.allow_concurrent_memtable_write: 1
+2019/03/07-19:45:59.958094 2a64      Options.enable_write_thread_adaptive_yield: 1
+2019/03/07-19:45:59.958130 2a64             Options.write_thread_max_yield_usec: 100
+2019/03/07-19:45:59.958156 2a64            Options.write_thread_slow_yield_usec: 3
+2019/03/07-19:45:59.958181 2a64                               Options.row_cache: None
+2019/03/07-19:45:59.958205 2a64                              Options.wal_filter: None
+2019/03/07-19:45:59.958229 2a64             Options.avoid_flush_during_recovery: 0
+2019/03/07-19:45:59.958250 2a64             Options.allow_ingest_behind: 0
+2019/03/07-19:45:59.958270 2a64             Options.preserve_deletes: 0
+2019/03/07-19:45:59.958286 2a64             Options.two_write_queues: 0
+2019/03/07-19:45:59.958305 2a64             Options.manual_wal_flush: 0
+2019/03/07-19:45:59.958322 2a64             Options.max_background_jobs: 2
+2019/03/07-19:45:59.958339 2a64             Options.max_background_compactions: -1
+2019/03/07-19:45:59.958356 2a64             Options.avoid_flush_during_shutdown: 0
+2019/03/07-19:45:59.958390 2a64           Options.writable_file_max_buffer_size: 1048576
+2019/03/07-19:45:59.958426 2a64             Options.delayed_write_rate : 16777216
+2019/03/07-19:45:59.958444 2a64             Options.max_total_wal_size: 0
+2019/03/07-19:45:59.958461 2a64             Options.delete_obsolete_files_period_micros: 21600000000
+2019/03/07-19:45:59.958493 2a64                   Options.stats_dump_period_sec: 600
+2019/03/07-19:45:59.958509 2a64                          Options.max_open_files: -1
+2019/03/07-19:45:59.958525 2a64                          Options.bytes_per_sync: 0
+2019/03/07-19:45:59.958542 2a64                      Options.wal_bytes_per_sync: 0
+2019/03/07-19:45:59.958558 2a64       Options.compaction_readahead_size: 0
+2019/03/07-19:45:59.958576 2a64 Compression algorithms supported:
+2019/03/07-19:45:59.958616 2a64 	Snappy supported: 0
+2019/03/07-19:45:59.958633 2a64 	Zlib supported: 0
+2019/03/07-19:45:59.958653 2a64 	Bzip supported: 0
+2019/03/07-19:45:59.958670 2a64 	LZ4 supported: 0
+2019/03/07-19:45:59.958688 2a64 	ZSTDNotFinal supported: 0
+2019/03/07-19:45:59.958705 2a64 	ZSTD supported: 0
+2019/03/07-19:45:59.958744 2a64 Fast CRC32 supported: Supported on x86
+2019/03/07-19:45:59.961039 2a64 [c:\users\aretter\code\rocksdb\db\version_set.cc:2834] Recovering from manifest file: MANIFEST-000020
+2019/03/07-19:45:59.961229 2a64 [c:\users\aretter\code\rocksdb\db\column_family.cc:431] --------------- Options for column family [default]:
+2019/03/07-19:45:59.961259 2a64               Options.comparator: leveldb.BytewiseComparator
+2019/03/07-19:45:59.961277 2a64           Options.merge_operator: None
+2019/03/07-19:45:59.961295 2a64        Options.compaction_filter: None
+2019/03/07-19:45:59.961312 2a64        Options.compaction_filter_factory: None
+2019/03/07-19:45:59.961329 2a64         Options.memtable_factory: SkipListFactory
+2019/03/07-19:45:59.961346 2a64            Options.table_factory: BlockBasedTable
+2019/03/07-19:45:59.961452 2a64            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (00000000012E9490)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 0
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  index_type: 0
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 000000001D808CC0
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 8388608
+    num_shard_bits : 4
+    strict_capacity_limit : 0
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 2
+2019/03/07-19:45:59.961486 2a64        Options.write_buffer_size: 67108864
+2019/03/07-19:45:59.961511 2a64  Options.max_write_buffer_number: 2
+2019/03/07-19:45:59.961595 2a64          Options.compression: NoCompression
+2019/03/07-19:45:59.961617 2a64                  Options.bottommost_compression: Disabled
+2019/03/07-19:45:59.961635 2a64       Options.prefix_extractor: nullptr
+2019/03/07-19:45:59.961652 2a64   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2019/03/07-19:45:59.961687 2a64             Options.num_levels: 7
+2019/03/07-19:45:59.961705 2a64        Options.min_write_buffer_number_to_merge: 1
+2019/03/07-19:45:59.961722 2a64     Options.max_write_buffer_number_to_maintain: 0
+2019/03/07-19:45:59.961739 2a64            Options.compression_opts.window_bits: -14
+2019/03/07-19:45:59.961756 2a64                  Options.compression_opts.level: -1
+2019/03/07-19:45:59.961773 2a64               Options.compression_opts.strategy: 0
+2019/03/07-19:45:59.961790 2a64         Options.compression_opts.max_dict_bytes: 0
+2019/03/07-19:45:59.961807 2a64      Options.level0_file_num_compaction_trigger: 4
+2019/03/07-19:45:59.961824 2a64          Options.level0_slowdown_writes_trigger: 20
+2019/03/07-19:45:59.961842 2a64              Options.level0_stop_writes_trigger: 36
+2019/03/07-19:45:59.961863 2a64                   Options.target_file_size_base: 67108864
+2019/03/07-19:45:59.961881 2a64             Options.target_file_size_multiplier: 1
+2019/03/07-19:45:59.961911 2a64                Options.max_bytes_for_level_base: 268435456
+2019/03/07-19:45:59.961927 2a64 Options.level_compaction_dynamic_level_bytes: 0
+2019/03/07-19:45:59.961944 2a64          Options.max_bytes_for_level_multiplier: 10.000000
+2019/03/07-19:45:59.961971 2a64 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2019/03/07-19:45:59.961988 2a64 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2019/03/07-19:45:59.962005 2a64 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2019/03/07-19:45:59.962021 2a64 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2019/03/07-19:45:59.962038 2a64 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2019/03/07-19:45:59.962054 2a64 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2019/03/07-19:45:59.962071 2a64 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2019/03/07-19:45:59.962087 2a64       Options.max_sequential_skip_in_iterations: 8
+2019/03/07-19:45:59.962104 2a64                    Options.max_compaction_bytes: 1677721600
+2019/03/07-19:45:59.962120 2a64                        Options.arena_block_size: 8388608
+2019/03/07-19:45:59.962137 2a64   Options.soft_pending_compaction_bytes_limit: 68719476736
+2019/03/07-19:45:59.962155 2a64   Options.hard_pending_compaction_bytes_limit: 274877906944
+2019/03/07-19:45:59.962172 2a64       Options.rate_limit_delay_max_milliseconds: 100
+2019/03/07-19:45:59.962188 2a64                Options.disable_auto_compactions: 0
+2019/03/07-19:45:59.962206 2a64                        Options.compaction_style: kCompactionStyleLevel
+2019/03/07-19:45:59.962224 2a64                          Options.compaction_pri: kByCompensatedSize
+2019/03/07-19:45:59.962241 2a64 Options.compaction_options_universal.size_ratio: 1
+2019/03/07-19:45:59.962258 2a64 Options.compaction_options_universal.min_merge_width: 2
+2019/03/07-19:45:59.962274 2a64 Options.compaction_options_universal.max_merge_width: 4294967295
+2019/03/07-19:45:59.962291 2a64 Options.compaction_options_universal.max_size_amplification_percent: 200
+2019/03/07-19:45:59.962307 2a64 Options.compaction_options_universal.compression_size_percent: -1
+2019/03/07-19:45:59.962324 2a64 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2019/03/07-19:45:59.962342 2a64 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2019/03/07-19:45:59.962358 2a64 Options.compaction_options_fifo.allow_compaction: 0
+2019/03/07-19:45:59.962398 2a64 Options.compaction_options_fifo.ttl: 0
+2019/03/07-19:45:59.962416 2a64                   Options.table_properties_collectors: 
+2019/03/07-19:45:59.962434 2a64                   Options.inplace_update_support: 0
+2019/03/07-19:45:59.962453 2a64                 Options.inplace_update_num_locks: 10000
+2019/03/07-19:45:59.962486 2a64               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2019/03/07-19:45:59.962505 2a64   Options.memtable_huge_page_size: 0
+2019/03/07-19:45:59.962522 2a64                           Options.bloom_locality: 0
+2019/03/07-19:45:59.962539 2a64                    Options.max_successive_merges: 0
+2019/03/07-19:45:59.962555 2a64                Options.optimize_filters_for_hits: 0
+2019/03/07-19:45:59.962572 2a64                Options.paranoid_file_checks: 0
+2019/03/07-19:45:59.962589 2a64                Options.force_consistency_checks: 0
+2019/03/07-19:45:59.962624 2a64                Options.report_bg_io_stats: 0
+2019/03/07-19:45:59.964749 2a64 [c:\users\aretter\code\rocksdb\db\version_set.cc:3100] Recovered from manifest file:./rocksDB/MANIFEST-000020 succeeded,manifest_file_number is 20, next_file_number is 22, last_sequence is 0, log_number is 0,prev_log_number is 0,max_column_family is 0
+2019/03/07-19:45:59.964794 2a64 [c:\users\aretter\code\rocksdb\db\version_set.cc:3108] Column family [default] (ID 0), log number is 19
+2019/03/07-19:45:59.965076 2a64 EVENT_LOG_v1 {"time_micros": 1551959159965028, "job": 1, "event": "recovery_started", "log_files": [21]}
+2019/03/07-19:45:59.965109 2a64 [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:518] Recovering log #21 mode 2
+2019/03/07-19:45:59.965247 2a64 [c:\users\aretter\code\rocksdb\db\version_set.cc:2609] Creating manifest 23
+2019/03/07-19:46:00.060908 2a64 EVENT_LOG_v1 {"time_micros": 1551959160060899, "job": 1, "event": "recovery_finished"}
+2019/03/07-19:46:00.121702 2a64 [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:1165] DB pointer 000000001DA23090
+2019/03/07-19:46:03.944924 275c [c:\users\aretter\code\rocksdb\db\db_impl.cc:249] Shutdown: canceling all background work
+2019/03/07-19:46:03.961010 275c [c:\users\aretter\code\rocksdb\db\db_impl.cc:379] Shutdown complete

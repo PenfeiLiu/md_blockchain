@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    show-sql: false
+    database-platform: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+    generate-ddl: true
+  view:
+   prefix: /WEB-INF/jsp/
+   suffix: .jsp
+db:
+  levelDB: false    #在部分Windows机器上rocksDB会报错dll找不到，那么就用levelDB来替代
+  rocksDB: true
+singleNode: true  #如果是单节点测试，改成true
+version: 1
+name: ${NAME:maida}
+appId: ${APP_ID:maida}
+managerUrl: ${MANAGER_URL:http://192.168.134.202:8888/}
+publicKey: A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54
+privateKey: yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=
+singeNode: true  #单节点测试模式
