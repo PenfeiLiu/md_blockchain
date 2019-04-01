@@ -83,76 +83,72 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                       </div>-->
                      
                   <div class="card-body" style="padding-top:0;">
-                    <form class="form-horizontal form-simple" action="index.jsp" novalidate>
+                    <form class="form-horizontal form-simple" method="post" action="/userregister">
                       <fieldset class="form-group position-relative has-icon-left mb-1">
-                        <input type="email" class="form-control form-control-lg input-lg" id="unitNo" placeholder="机构编号（营业执照号）">
+                        <input type="text" class="form-control form-control-lg input-lg" id="unitno" placeholder="机构编号（营业执照号）" name="unitno">
                         
                       </fieldset>
                       
                          
                       <fieldset class="form-group position-relative has-icon-left mb-1">
-                      <select class="hide-search form-control accordion-text form-control form-control-lg input-lg" id="unitType" style="color:#babfc7;padding-left:1.10rem;">
+                      <select class="hide-search form-control accordion-text form-control form-control-lg input-lg" id="unittype" style="color:#babfc7;padding-left:1.10rem;" name="unittype">
                         <optgroup label=""><option value="">机构类型</option>
-                          <option value="">1-认证机构</option>
-                          <option value="">2-检测检验机构</option>
-                            <option value="">3-政府监管机构</option>
+                          <option value="1">1-认证机构</option>
+                          <option value="2">2-检测检验机构</option>
+                            <option value="3">3-政府监管机构</option>
                         </optgroup>
                       </select>  </fieldset>
                   
                       
                        <fieldset class="form-group position-relative has-icon-left mb-1">
-                      <select class="hide-search form-control accordion-text form-control form-control-lg input-lg" id="userType" style="color:#babfc7;padding-left:1.10rem;">
+                      <select class="hide-search form-control accordion-text form-control form-control-lg input-lg" id="usertype" style="color:#babfc7;padding-left:1.10rem;" name="usertype">
                         <optgroup label=""><option value="">用户类型</option>
-                          <option value="">1-业务员</option>
-                          <option value="">2-审核员</option>
+                          <option value="1">1-业务员</option>
+                          <option value="2">2-审核员</option>
                         </optgroup>
                       </select>  </fieldset>
                       
                            
                        <fieldset class="form-group position-relative has-icon-left mb-1">
-                      <select class="hide-search form-control accordion-text form-control form-control-lg input-lg" id="userType" style="color:#babfc7;padding-left:1.10rem;">
+                      <select class="hide-search form-control accordion-text form-control form-control-lg input-lg" id="roletype" style="color:#babfc7;padding-left:1.10rem;" name="roletype">
                         <optgroup label=""><option value="">角色类型</option>
-                          <option value="">1-网安中心操作员</option>
-                          <option value="">2-网安中心操作员</option>
+                          <option value="1">1-网安中心操作员</option>
+                          <option value="2">2-网安中心操作员</option>
                         </optgroup>
                       </select>  </fieldset>
                       
                       
                       
                       <fieldset class="form-group position-relative has-icon-left mb-1">
-                        <input type="email" class="form-control form-control-lg input-lg" id="ID"
-                        placeholder="身份证号码" required>
+                        <input type="text" class="form-control form-control-lg input-lg" id="idnumber" name="idnumber" placeholder="身份证号码" required>
                        
                       </fieldset>
                    
                       <fieldset class="form-group position-relative has-icon-left mb-1">
-                        <input type="email" class="form-control form-control-lg input-lg" id="name"
-                        placeholder="姓名" required>
+                        <input type="text" class="form-control form-control-lg input-lg" id="name" name="name" placeholder="姓名" required>
                        
                       </fieldset>
                       
                       <fieldset class="form-group position-relative has-icon-left mb-1">
-                        <input type="password" class="form-control form-control-lg input-lg" id="passwd"
-                        placeholder="密 码" required>
+                        <input type="password" class="form-control form-control-lg input-lg" id="password" name="password" placeholder="密 码" required>
                       
                       </fieldset>
                           <fieldset class="form-group position-relative has-icon-left mb-1">
-                        <input type="password" class="form-control form-control-lg input-lg" id="passwd"
-                        placeholder="确认密码" required>
+                        <input type="password" class="form-control form-control-lg input-lg" id="password1" name="password1" placeholder="确认密码" required>
                       
                       </fieldset>
                       
                       
-                      <button type="submit" class="btn btn-info btn-lg btn-block">点击注册</button>
+                      <input type="submit" class="btn btn-info btn-lg btn-block">
                     </form>
                   </div>
                   <p class="text-center">已经注册过了? <a href="login-simple.jsp" class="card-link">使用已有帐户登录</a></p>
                 </div>
               </div>
             </div>
-          </div>
+
         </section>
-      </div>
+    </div>
     </div>
   </div>
   <!-- ////////////////////////////////////////////////////////////////////////////-->

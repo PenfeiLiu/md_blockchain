@@ -36,8 +36,7 @@
   <link rel="stylesheet" type="text/css" href="statics/css/style.css">
   <!-- END Custom CSS-->
 </head>
-<body class="vertical-layout vertical-menu 1-column   menu-expanded blank-page blank-page"
-data-open="click" data-menu="vertical-menu" data-col="1-column">
+<body class="vertical-layout vertical-menu 1-column   menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-menu" data-col="1-column">
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <div class="app-content content">
     <div class="content-wrapper">
@@ -61,38 +60,35 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                   
                      
                       
-                       <form class="form-horizontal" action="login-simple.jsp" novalidate>
+                       <form class="form-horizontal" method="post" action="/revisepassword">
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="email" class="form-control form-control-lg input-lg" id="user-email"
-                        placeholder="当前密码" required>
+                        <input type="password" class="form-control form-control-lg input-lg" id="currentpassword" name="currentpassword" placeholder="当前密码" required>
                         <div class="form-control-position">
                           <i class="ft-lock"></i>
                         </div>
                       </fieldset> 
-                       <form class="form-horizontal" action="login-simple.jsp" novalidate>
+
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="email" class="form-control form-control-lg input-lg" id="user-email"
-                        placeholder="新密码" required>
+                        <input type="password" class="form-control form-control-lg input-lg" id="newpassword" name="newpassword" placeholder="新密码" required>
                         <div class="form-control-position">
                           <i class="ft-lock"></i>
                         </div>
                       </fieldset>
                       
-                      <form class="form-horizontal" action="login-simple.jsp" novalidate>
+
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="email" class="form-control form-control-lg input-lg" id="user-email"
-                        placeholder="再次确认新密码" required>
+                        <input type="password" class="form-control form-control-lg input-lg" id="newpassword1" name="newpassword1" placeholder="再次确认新密码" required>
                         <div class="form-control-position">
                           <i class="ft-lock"></i>
                         </div>
                       </fieldset>
-                      <button type="submit" class="btn btn-outline-info btn-lg btn-block">修改密码</button>
+                      <input type="submit" class="btn btn-outline-info btn-lg btn-block">修改密码</input>
                     </form>
                   </div>
                 </div>
                 <div class="card-footer border-0">
-                  <p class="float-sm-left text-center"><a href="login-simple.jsp" class="card-link">登录</a></p>
-                  <p class="float-sm-right text-center">还没有帐号? <a href="register-simple.jsp" class="card-link">点击注册</a></p>
+                  <p class="float-sm-left text-center"><a href="/login" class="card-link">登录</a></p>
+                  <p class="float-sm-right text-center">还没有帐号? <a href="/register" class="card-link">点击注册</a></p>
                 </div>
               </div>
             </div>

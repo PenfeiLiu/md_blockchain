@@ -110,6 +110,7 @@ public class SqliteManager {
     private <T extends InstructionBase> void doSqlParse(List<T> instructions) {
         for (InstructionBase instruction : instructions) {
             instructionParser.parse(instruction);
+            System.out.println(instruction.getOldJson()+"============");
         }
     }
     

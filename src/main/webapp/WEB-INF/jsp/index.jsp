@@ -268,8 +268,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
       </li>
       <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">用户维护</span></a>
          <ul class="menu-content">         
-         <li><a class="menu-item" href="revise-password.jsp" data-i18n="">密码修改</a> </li>
-         <li><a class="menu-item" href="recover-password.jsp" data-i18n="">忘记密码</a> </li>
+         <li><a class="menu-item" href="/changepassword" data-i18n="">密码修改</a> </li>
+         <li><a class="menu-item" href="/forgetpassword" data-i18n="">忘记密码</a> </li>
         </ul>
       </li>
        <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">用户注销</span></a>
