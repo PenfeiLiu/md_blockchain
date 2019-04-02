@@ -18,6 +18,7 @@ public class UserSqlParser extends AbstractSqlParser<UserEntity> {
 
     @Override
     public  void parse(byte operation, String id, UserEntity entity) {
+      //  id = String.valueOf(entity.getId()) ;
        System.out.println(entity.toString()+"------------------------------------------------------------");
         if (Operation.ADD == operation) {
           //  entity.setCreateTime(CommonUtil.getNow());
@@ -25,9 +26,9 @@ public class UserSqlParser extends AbstractSqlParser<UserEntity> {
         } else if (Operation.DELETE == operation) {
            // userRepository.deleteByMessageId(messageId);
         } else if (Operation.UPDATE == operation) {
-        /*    UserEntity messageEntity = userRepository.findByMessageId(messageId);
-            BeanUtil.copyProperties(entity, messageEntity, CopyOptions.create().setIgnoreNullValue(true).setIgnoreProperties("id", "createTime"));
-            userRepository.save(messageEntity);*/
+            UserEntity userEntity = userRepository.findOne(entity.getId());
+            BeanUtil.copyProperties(entity, userEntity, CopyOptions.create().setIgnoreNullValue(true).setIgnoreProperties("createTime"));
+            userRepository.save(userEntity);
         }
     }
 

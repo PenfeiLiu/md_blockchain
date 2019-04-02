@@ -91,9 +91,9 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                 </div>
                 <div class="card-content">
                   <div class="card-body">
-                    <form class="form-horizontal" action="index.jsp" novalidate>
+                    <form class="form-horizontal" action="/userlogin" method="post">
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="text" class="form-control input-lg" id="user-name" placeholder="帐户名"
+                        <input type="text" class="form-control input-lg" id="idnumber" name="idnumber" placeholder="姓名"
                         tabindex="1" required data-validation-required-message="请输入帐户名">
                         <div class="form-control-position">
                           <i class="ft-user"></i>
@@ -101,8 +101,7 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                         <div class="help-block font-small-3"></div>
                       </fieldset>
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="password" class="form-control input-lg" id="password" placeholder="密码"
-                        tabindex="2" required data-validation-required-message="Please enter valid passwords.">
+                        <input type="password" class="form-control input-lg" id="password" placeholder="密码" name="password" tabindex="2" required data-validation-required-message="Please enter valid passwords.">
                         <div class="form-control-position">
                           <i class="la la-key" style="color:#ababab;"></i>
                         </div>
@@ -111,11 +110,11 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                       <div class="form-group row">
                         <div class="col-md-6 col-12 text-center text-md-left">
                           <fieldset>
-                            <input type="checkbox" id="remember-me" class="chk-remember">
-                            <label for="remember-me">记住密码</label>
+                            <input type="hidden" id="remember-me" class="chk-remember">
+                            <label for="remember-me"></label>
                           </fieldset>
                         </div>
-                        <div class="col-md-6 col-12 text-center text-md-right"><a href="recover-password.jsp" class="card-link">忘记密码?</a></div>
+                        <div class="col-md-6 col-12 text-center text-md-right"><a href="/forgetpassword" class="card-link">忘记密码?</a></div>
                       </div>
                       <button type="submit" class="btn btn-danger btn-block btn-lg"> 点击登录</button>
                     </form>
@@ -125,7 +124,7 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                   <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
                     <span>还没有平台帐户?</span>
                   </p>
-                  <a href="register-advanced.jsp" class="btn btn-info btn-block btn-lg mt-3">点击注册</a>
+                  <a href="/register" class="btn btn-info btn-block btn-lg mt-3">点击注册</a>
                 </div>
               </div>
             </div>

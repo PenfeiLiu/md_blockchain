@@ -13,4 +13,5 @@ import java.util.List;
     public interface UserRepository extends BaseRepository<UserEntity>{
 
 
+
 }

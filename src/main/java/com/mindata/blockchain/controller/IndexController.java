@@ -58,25 +58,29 @@ public class IndexController {
 
     @RequestMapping("/login")
     public String login() throws Exception {
-        InstructionBody instructionBody = new InstructionBody();
-        instructionBody.setOperation(Operation.ADD);
-        instructionBody.setTable("user");
-        instructionBody.setJson("{\"name\":\"" + "666" + "\",\"password\":\""+"1234"+"\"}");
-        /*instructionBody.setPublicKey("A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54");
-        instructionBody.setPrivateKey("yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=");*/
-        instructionBody.setPublicKey(publicKey);
-        instructionBody.setPrivateKey(privateKey);
-        Instruction instruction = instructionService.build(instructionBody);
+//        InstructionBody instructionBody = new InstructionBody();
+//        instructionBody.setOperation(Operation.ADD);
+//        instructionBody.setTable("user");
+//        instructionBody.setJson("{\"name\":\"" + "666" + "\",\"password\":\""+"1234"+"\"}");
+//        /*instructionBody.setPublicKey("A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54");
+//        instructionBody.setPrivateKey("yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=");*/
+//        instructionBody.setPublicKey(publicKey);
+//        instructionBody.setPrivateKey(privateKey);
+//        Instruction instruction = instructionService.build(instructionBody);
+//
+//        BlockRequestBody blockRequestBody = new BlockRequestBody();
+//        blockRequestBody.setPublicKey(instructionBody.getPublicKey());
+//        com.mindata.blockchain.block.BlockBody blockBody = new com.mindata.blockchain.block.BlockBody();
+//        blockBody.setInstructions(CollectionUtil.newArrayList(instruction));
+//
+//        blockRequestBody.setBlockBody(blockBody);
+//        blockService.addBlock(blockRequestBody);
+//        System.out.print(blockBody.toString());
+        return "login-advanced";
 
-        BlockRequestBody blockRequestBody = new BlockRequestBody();
-        blockRequestBody.setPublicKey(instructionBody.getPublicKey());
-        com.mindata.blockchain.block.BlockBody blockBody = new com.mindata.blockchain.block.BlockBody();
-        blockBody.setInstructions(CollectionUtil.newArrayList(instruction));
-
-        blockRequestBody.setBlockBody(blockBody);
-        blockService.addBlock(blockRequestBody);
-        System.out.print(blockBody.toString());
-        return "welcomes";
-
+    }
+    @RequestMapping("/showcharts")
+    public String showCharts(){
+        return "charts";
     }
 }
