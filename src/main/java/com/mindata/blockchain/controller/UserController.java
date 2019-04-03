@@ -75,6 +75,7 @@ public class UserController {
         instructionBody.setOperation(Operation.UPDATE);
         instructionBody.setTable("user");
         instructionBody.setJson("{\"id\":\"" + changeUserId + "\",\"password\":\"" + newpassword + "\",\"idnumber\":\""+idnumber+"\",\"unitno\":\""+unitno+"\"}");
+
         /*instructionBody.setPublicKey("A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54");
         instructionBody.setPrivateKey("yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=");*/
         instructionBody.setPublicKey(publicKey);
@@ -102,6 +103,7 @@ public class UserController {
         instructionBody.setOperation(Operation.ADD);
         instructionBody.setTable("user");
         instructionBody.setJson("{\"unitno\":\"" + unitno + "\",\"unittype\":\""+unittype+"\",\"roletype\":\""+roletype+"\",\"idnumber\":\""+idnumber+"\",\"userType\":\""+usertype+"\",\"name\":\""+name+"\",\"password\":\""+password+"\",\"ifcheck\":\""+"0"+"\"}");
+        System.out.println("++++++++++++"+instructionBody.getJson());
         /*instructionBody.setPublicKey("A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54");
         instructionBody.setPrivateKey("yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=");*/
         instructionBody.setPublicKey(publicKey);
