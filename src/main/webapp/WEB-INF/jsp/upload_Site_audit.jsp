@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
   String path = request.getContextPath();
@@ -362,14 +363,14 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                     <div class="card-text">
                       <p></p>
                     </div>
-                    <form class="form form-horizontal">
+                    <form:form class="form form-horizontal" action="/uploadOnSiteAuditData" method="post" modelAttribute="onSiteAuditData">
                       <div class="form-body">
                         <div class="form-group row">
                           <label class="col-md-3 label-control" for="timesheetinput1">委托人单位编号</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="unitID" class="form-control" placeholder="营业执照编号"
-                              name="营业执照编号">
+                              <form:input type="text" id="unitID" class="form-control" placeholder="营业执照编号"
+                              name="营业执照编号" path="agencyManNum"/>
                               <div class="form-control-position">
                                 <i class="ft-edit"></i>
                               </div>
@@ -380,7 +381,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control" for="timesheetinput2">委托人单位名称</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="unitName" class="form-control" placeholder="委托人单位名称" name="委托人单位名称">
+                              <form:input type="text" id="unitName" class="form-control" placeholder="委托人单位名称" name="委托人单位名称" path="agencyManName"/>
                               <div class="form-control-position">
                                 <i class="la la-briefcase"></i>
                               </div>
@@ -395,8 +396,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">交易平台名称</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="platformName" class="form-control" placeholder="交易平台名称"
-                              name="交易平台名称">
+                              <form:input type="text" id="platformName" class="form-control" placeholder="交易平台名称"
+                              name="交易平台名称" path="tradePlateformName"/>
                               <div class="form-control-position">
                                 <i class="ft-user"></i>
                               </div>
@@ -407,8 +408,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">交易平台版本</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="edition" class="form-control" placeholder="交易平台版本"
-                              name="交易平台版本">
+                              <form:input type="text" id="edition" class="form-control" placeholder="交易平台版本"
+                              name="交易平台版本" path="getTradePlateformVersion"/>
                               <div class="form-control-position">
                                 <i class="ft-file"></i>
                               </div>
@@ -420,8 +421,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">认证机构编号</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="certificationUnitID" class="form-control" placeholder="认证机构编号"
-                              name="认证机构编号">
+                              <form:input type="text" id="certificationUnitID" class="form-control" placeholder="认证机构编号"
+                              name="认证机构编号" path="certificationAgencyNum"/>
                               <div class="form-control-position">
                                 <i class="ft-feather"></i>
                               </div>
@@ -433,8 +434,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">认证机构名称</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="certificationUnitName" class="form-control" placeholder="认证机构名称"
-                              name="认证机构名称">
+                              <form:input type="text" id="certificationUnitName" class="form-control" placeholder="认证机构名称"
+                              name="认证机构名称" path="certificationAgencyName"/>
                               <div class="form-control-position">
                                 <i class="ft-pie-chart"></i>
                               </div>
@@ -446,8 +447,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">现场审核报告结论</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="conclusion" class="form-control" placeholder="现场审核报告结论"
-                              name="现场审核报告结论">
+                              <form:input type="text" id="conclusion" class="form-control" placeholder="现场审核报告结论"
+                              name="现场审核报告结论" path="onSiteCheckResult"/>
                               <div class="form-control-position">
                                 <i class="ft-award"></i>
                               </div>
@@ -459,7 +460,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">审核时间</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                               <input type="text" id="审核时间" class="form-control dp-for-alternate" />
+                               <form:input type="text" id="审核时间" class="form-control dp-for-alternate"  path="checkTime"/>
                               <div class="form-control-position">
                                 <i class="ft-clock"></i>
                               </div>
@@ -480,8 +481,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">审核人证件号码</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="auditorID" class="form-control" placeholder="审核人证件号码"
-                              name="审核人证件号码">
+                              <form:input type="text" id="auditorID" class="form-control" placeholder="审核人证件号码"
+                              name="审核人证件号码" path="checkManId"/>
                               <div class="form-control-position">
                                 <i class="ft-credit-card"></i>
                               </div>
@@ -492,8 +493,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">审核人姓名</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="auditorName" class="form-control" placeholder="审核人姓名"
-                              name="审核人姓名">
+                              <form:input type="text" id="auditorName" class="form-control" placeholder="审核人姓名"
+                              name="审核人姓名" path="checkManName"/>
                               <div class="form-control-position">
                                 <i class="ft-user"></i>
                               </div>
@@ -508,8 +509,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">私钥加密后的数据摘要</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="encryptedSummary" class="form-control" placeholder="私钥加密后的数据摘要"
-                              name="私钥加密后的数据摘要">
+                              <form:input type="text" id="encryptedSummary" class="form-control" placeholder="私钥加密后的数据摘要"
+                              name="私钥加密后的数据摘要" path="privateKeyDataAbastrat"/>
                               <div class="form-control-position">
                                 <i class="ft-layout"></i>
                               </div>
@@ -522,8 +523,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">数据上传人证件号码</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="postPersonID" class="form-control" placeholder="数据上传人证件号码"
-                              name="数据上传人证件号码">
+                              <form:input type="text" id="postPersonID" class="form-control" placeholder="数据上传人证件号码"
+                              name="数据上传人证件号码" path="uploadManId"/>
                               <div class="form-control-position">
                                 <i class="ft-credit-card"></i>
                               </div>
@@ -534,8 +535,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <label class="col-md-3 label-control">数据上传人证件姓名</label>
                           <div class="col-md-9">
                             <div class="position-relative has-icon-left">
-                              <input type="text" id="postPersonName" class="form-control" placeholder="数据上传人证件姓名"
-                              name="数据上传人证件姓名">
+                              <form:input type="text" id="postPersonName" class="form-control" placeholder="数据上传人证件姓名"
+                              name="数据上传人证件姓名" path="getUploadManName"/>
                               <div class="form-control-position">
                                 <i class="ft-user"></i>
                               </div>
@@ -546,15 +547,15 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                         
                         
                       </div>
-                      <div class="form-actions right"> <button type="submit" class="btn btn-primary mr-1" style="margin:0 0 0 214px;padding-left:40px; padding-right:40px;">
-                          保 存
-                        </button>
+                      <div class="form-actions right"> <input type="submit" value="保存" class="btn btn-primary mr-1" style="margin:0 0 0 214px;padding-left:40px; padding-right:40px;">
+
+
                         <button type="button" class="btn btn-warning" style="padding-left:40px; padding-right:40px;">
                            取 消
                         </button>
                      
                       </div>
-                    </form>
+                  </form:form>
                   </div>
                 </div>
               </div>

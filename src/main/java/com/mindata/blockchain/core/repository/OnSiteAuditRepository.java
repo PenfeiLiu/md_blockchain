@@ -1,4 +1,6 @@
 package com.mindata.blockchain.core.repository;
 
-public class OnSiteAuditRepository {
+import com.mindata.blockchain.core.model.OnSiteAuditData;
+
+public interface OnSiteAuditRepository extends BaseRepository<OnSiteAuditData> {
 }

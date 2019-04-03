@@ -148,4 +148,32 @@ public class UploadCertificateDataController {//数据上传所有功能模块
         return "/index";
 
     }
+
+    @RequestMapping(value = "/uploadOnSiteAuditData",method = RequestMethod.POST)
+    public String uploadOnSiteAuditData(@ModelAttribute("onSiteAuditData")OnSiteAuditData onSiteAuditData){
+        //HttpSession session=request.getSession();
+        System.out.println(onSiteAuditData.toString());
+        InstructionBody instructionBody = new InstructionBody();
+        instructionBody.setOperation(Operation.ADD);
+        instructionBody.setTable("on_site_data");
+        instructionBody.setJson(onSiteAuditData.toString());
+        instructionBody.setPublicKey(publicKey);
+        instructionBody.setPrivateKey(privateKey);
+        Instruction instruction = null;
+        try {
+            instruction = instructionService.build(instructionBody);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BlockRequestBody blockRequestBody = new BlockRequestBody();
+        blockRequestBody.setPublicKey(instructionBody.getPublicKey());
+        com.mindata.blockchain.block.BlockBody blockBody = new com.mindata.blockchain.block.BlockBody();
+        blockBody.setInstructions(CollectionUtil.newArrayList(instruction));
+
+        blockRequestBody.setBlockBody(blockBody);
+        blockService.addBlock(blockRequestBody);
+
+        return "/index";
+
+    }
 }
