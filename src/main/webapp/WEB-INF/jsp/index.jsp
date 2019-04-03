@@ -1,4 +1,4 @@
-﻿<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+﻿﻿<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
@@ -287,8 +287,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
    
       <li class="nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">证书下载</span></a>
         <ul class="menu-content">
-          <li><a class="menu-item" href="Certificate_download.jsp" data-i18n="">证书下载</a> </li>
-          <li><a class="menu-item" href="#" data-i18n="">证书管理</a> </li>
+          <li><a class="menu-item" href="/certificatedownload" data-i18n="">证书下载</a> </li>
+
             
          
          
