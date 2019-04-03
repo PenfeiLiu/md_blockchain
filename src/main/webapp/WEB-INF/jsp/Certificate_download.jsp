@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
@@ -322,8 +323,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                       <table class="jsgrid-table">
                         <tr class="jsgrid-header-row">
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 50px;">序号</th>
-                          <th class="jsgrid-header-cell jsgrid-align-center" style="width: 150px;">业务名称</th>
-                          <th class="jsgrid-header-cell jsgrid-align-center" style="width: 100px;">开始时间</th>
+                          <th class="jsgrid-header-cell jsgrid-align-center" style="width: 150px;">委托人单位名称</th>
+                          <th class="jsgrid-header-cell jsgrid-align-center" style="width: 100px;">创建时间</th>
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 100px;">状态</th>
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 200px;">操作</th>
                         </tr>
@@ -333,111 +334,17 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                     <div class="jsgrid-grid-body" style="height: 363px;">
                       <table class="jsgrid-table">
                         <tbody>
+                        <c:forEach items="${certificatelist}" var="list" varStatus="status">
                           <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">01</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
+                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">${list.id}</td>
+                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">${list.agencyName}</td>
+                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">${list.giveDate}</td>
+                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">${list.certificateConclude}</td>
                             <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
                           </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">02</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                         <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">03</td>
-                          <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">04</td>
-                          <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                        <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">05</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">06</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                          
-        <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">07</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">08</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>                  
-                          
-                         <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">09</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">10</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr> 
-                          
-                          
-                          
-     <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">11</td>
-                          <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">12</td>
-                           <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">某某某证书</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2018-02-18</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">有效</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-success"  style="padding:8px 8px;">点击下载</span></td>
-                          </tr>                     
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
-                          
+
+
+                        </c:forEach>
                         </tbody>
                       </table>
                     </div>
