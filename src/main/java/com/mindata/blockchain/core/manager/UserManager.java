@@ -21,4 +21,7 @@ public class UserManager {
     public UserEntity findOne(Long id){
         return userRepository.findOne(id);
     }
+    public List<UserEntity> findAll(Example<UserEntity> example){
+        return userRepository.findAll(example);
+    }
 }

@@ -1,4 +1,6 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
@@ -476,7 +478,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 50px;">编号</th>
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 150px;">机构编号</th>
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 100px;">姓名</th>
-                          <th class="jsgrid-header-cell jsgrid-align-center" style="width: 100px;">申请时间</th>
+                          <th class="jsgrid-header-cell jsgrid-align-center" style="width: 100px;">身份证号</th>
                           <th class="jsgrid-header-cell jsgrid-align-center" style="width: 200px;">操作</th>
                         </tr>
                        
@@ -485,117 +487,19 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                     <div class="jsgrid-grid-body" style="height: 363px;">
                       <table class="jsgrid-table">
                         <tbody>
+                        <c:forEach items="${userlist}" var="user" varStatus="status">
                           <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">01</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
+                              <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">${user.id}</td>
+                              <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">${user.unitno}</td>
+                              <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">${user.name}</td>
+                              <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">${user.idnumber}</td>
+                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;"><a href="/showuserdetail/${user.id}">查看详情</a></span>
+                              &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;"><a href="/passcheck/${user.id}">审核通过</a></span></td>
                           </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">02</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                         <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">03</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">04</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                        <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">06</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                          
-        <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">07</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">08</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>                  
-                          
-                         <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">09</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">10</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr> 
-                          
-                          
-                          
-     <tr class="jsgrid-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">11</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>
-                          
-                           <tr class="jsgrid-alt-row">
-                            <td class="jsgrid-cell jsgrid-align-center" style="width:50px;">12</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 150px;">05266367-4</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">张恩丽</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 100px;">2019-03-05</td>
-                            <td class="jsgrid-cell jsgrid-align-center" style="width: 200px;"> <span class="badge badge-primary" style="padding:8px 8px;">查看详情</span>
-                   &nbsp;&nbsp; <span class="badge badge-success"  style="padding:8px 8px;">审核通过</span></td>
-                          </tr>                     
-                          
-                          
-                          
-                          
+
+
+                        </c:forEach>
+
                           
                           
                           

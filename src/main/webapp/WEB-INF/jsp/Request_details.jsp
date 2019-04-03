@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
   String path = request.getContextPath();
@@ -63,133 +64,6 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         <ul class="nav navbar-nav mr-auto float-left">
           <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
           <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
-          <!--<li class="dropdown nav-item mega-dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Mega</a>
-              <ul class="mega-dropdown-menu dropdown-menu row">
-                <li class="col-md-2">
-                  <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="la la-newspaper-o"></i> News</h6>
-                  <div id="mega-menu-carousel-example">
-                    <div>
-                      <img class="rounded img-fluid mb-1" src="statics/images/slider/slider-2.png"
-                      alt="First slide"><a class="news-title mb-0" href="#">Poster Frame PSD</a>
-                      <p class="news-content">
-                        <span class="font-small-2">January 26, 2018</span>
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="col-md-3">
-                  <h6 class="dropdown-menu-header text-uppercase"><i class="la la-random"></i> Drill down menu</h6>
-                  <ul class="drilldown-menu">
-                    <li class="menu-list">
-                      <ul>
-                        <li>
-                          <a class="dropdown-item" href="layout-2-columns.jsp"><i class="ft-file"></i> Page layouts & Templates</a>
-                        </li>
-                        <li><a href="#"><i class="ft-align-left"></i> Multi level menu</a>
-                          <ul>
-                            <li><a class="dropdown-item" href="#"><i class="la la-bookmark-o"></i>  Second level</a></li>
-                            <li><a href="#"><i class="la la-lemon-o"></i> Second level menu</a>
-                              <ul>
-                                <li><a class="dropdown-item" href="#"><i class="la la-heart-o"></i>  Third level</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="la la-file-o"></i> Third level</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="la la-trash-o"></i> Third level</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="la la-clock-o"></i> Third level</a></li>
-                              </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="la la-hdd-o"></i> Second level, third link</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="la la-floppy-o"></i> Second level, fourth link</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="color-palette-primary.jsp"><i class="ft-camera"></i> Color palette system</a>
-                        </li>
-                        <li><a class="dropdown-item" href="sk-2-columns.jsp"><i class="ft-edit"></i> Page starter kit</a></li>
-                        <li><a class="dropdown-item" href="changelog.jsp"><i class="ft-minimize-2"></i> Change log</a></li>
-                        <li>
-                          <a class="dropdown-item" href="https://pixinvent.ticksy.com/"><i class="la la-life-ring"></i> Customer support center</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="col-md-3">
-                  <h6 class="dropdown-menu-header text-uppercase"><i class="la la-list-ul"></i> Accordion</h6>
-                  <div id="accordionWrap" role="tablist" aria-multiselectable="true">
-                    <div class="card border-0 box-shadow-0 collapse-icon accordion-icon-rotate">
-                      <div class="card-header p-0 pb-2 border-0" id="headingOne" role="tab"><a data-toggle="collapse" data-parent="#accordionWrap" href="#accordionOne"
-                        aria-expanded="true" aria-controls="accordionOne">Accordion Item #1</a></div>
-                      <div class="card-collapse collapse show" id="accordionOne" role="tabpanel" aria-labelledby="headingOne"
-                      aria-expanded="true">
-                        <div class="card-content">
-                          <p class="accordion-text text-small-3">Caramels dessert chocolate cake pastry jujubes bonbon.
-                            Jelly wafer jelly beans. Caramels chocolate cake liquorice
-                            cake wafer jelly beans croissant apple pie.</p>
-                        </div>
-                      </div>
-                      <div class="card-header p-0 pb-2 border-0" id="headingTwo" role="tab"><a class="collapsed" data-toggle="collapse" data-parent="#accordionWrap"
-                        href="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">Accordion Item #2</a></div>
-                      <div class="card-collapse collapse" id="accordionTwo" role="tabpanel" aria-labelledby="headingTwo"
-                      aria-expanded="false">
-                        <div class="card-content">
-                          <p class="accordion-text">Sugar plum bear claw oat cake chocolate jelly tiramisu
-                            dessert pie. Tiramisu macaroon muffin jelly marshmallow
-                            cake. Pastry oat cake chupa chups.</p>
-                        </div>
-                      </div>
-                      <div class="card-header p-0 pb-2 border-0" id="headingThree" role="tab"><a class="collapsed" data-toggle="collapse" data-parent="#accordionWrap"
-                        href="#accordionThree" aria-expanded="false" aria-controls="accordionThree">Accordion Item #3</a></div>
-                      <div class="card-collapse collapse" id="accordionThree" role="tabpanel" aria-labelledby="headingThree"
-                      aria-expanded="false">
-                        <div class="card-content">
-                          <p class="accordion-text">Candy cupcake sugar plum oat cake wafer marzipan jujubes
-                            lollipop macaroon. Cake dragée jujubes donut chocolate
-                            bar chocolate cake cupcake chocolate topping.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="col-md-4">
-                  <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="la la-envelope-o"></i> Contact Us</h6>
-                  <form class="form form-horizontal">
-                    <div class="form-body">
-                      <div class="form-group row">
-                        <label class="col-sm-3 form-control-label" for="inputName1">Name</label>
-                        <div class="col-sm-9">
-                          <div class="position-relative has-icon-left">
-                            <input class="form-control" type="text" id="inputName1" placeholder="John Doe">
-                            <div class="form-control-position pl-1"><i class="la la-user"></i></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-sm-3 form-control-label" for="inputEmail1">Email</label>
-                        <div class="col-sm-9">
-                          <div class="position-relative has-icon-left">
-                            <input class="form-control" type="email" id="inputEmail1" placeholder="john@example.com">
-                            <div class="form-control-position pl-1"><i class="la la-envelope-o"></i></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-sm-3 form-control-label" for="inputMessage1">Message</label>
-                        <div class="col-sm-9">
-                          <div class="position-relative has-icon-left">
-                            <textarea class="form-control" id="inputMessage1" rows="2" placeholder="Simple Textarea"></textarea>
-                            <div class="form-control-position pl-1"><i class="la la-commenting-o"></i></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12 mb-1">
-                          <button class="btn btn-info float-right" type="button"><i class="la la-paper-plane-o"></i> Send </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </li>
-              </ul>
-            </li>-->
           <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="search-page.jsp"><i class="ficon ft-search"></i></a>
             <div class="search-input">
               <input class="input" type="text" placeholder="Explore Modern...">
@@ -437,51 +311,23 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
       <div class="content-body">
         <section class="card">
           <div id="invoice-template" class="card-body">
-            <!-- Invoice Company Details -->
-            <!--<div id="invoice-company-details" class="row">
-              <div class="col-md-6 col-sm-12 text-center text-md-left">
-                <div class="media">
-                  <img src="statics/images/logo/logo-80x80.png" alt="company logo" class=""
-                  />
-                  <div class="media-body">
-                    <ul class="ml-2 px-0 list-unstyled">
-                      <li class="text-bold-800">Modern Creative Studio</li>
-                      <li>4025 Oak Avenue,</li>
-                      <li>Melbourne,</li>
-                      <li>Florida 32940,</li>
-                      <li>USA</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-12 text-center text-md-right">
-                <h2>INVOICE</h2>
-                <p class="pb-3"># INV-001001</p>
-                <ul class="px-0 list-unstyled">
-                  <li>Balance Due</li>
-                  <li class="lead text-bold-800">$ 12,000.00</li>
-                </ul>
-              </div>
-            </div>-->
-            <!--/ Invoice Company Details -->
-            <!-- Invoice Customer Details -->
             <div id="invoice-customer-details" class="row pt-2" style="font-size:15px;margin-bottom:40px;">
               <div class="col-sm-12 text-center text-md-left"> <p class="lead" style="border-bottom:1px solid #e3ebf3;padding-bottom:10px;">详细信息:</p>
                
               </div>
               <div class="col-md-6 col-sm-12 text-center text-md-left">
                 <ul class="px-0 list-unstyled">
-                <li><b style="margin-right:15px;">机构编号:</b>45898789-7</li>
-                  <li><b style="margin-right:15px;">机构类型:</b>2-检测检验机构</li>
-                  <li><b style="margin-right:15px;">用户类型:</b>1-业务员</li>
-                  <li><b style="margin-right:15px;">身份证号码:</b>371325194568978986</li>
+                <li><b style="margin-right:15px;">机构编号:</b>${userdetail.unitno}</li>
+                  <li><b style="margin-right:15px;">机构类型:</b>${userdetail.unittype}</li>
+                  <li><b style="margin-right:15px;">用户类型:</b>${userdetail.usertype}</li>
+                  <li><b style="margin-right:15px;">身份证号码:</b>${userdetail.idnumber}</li>
                 
                 </ul>
               </div>
               <div class="col-md-6 col-sm-12 text-center text-md-left">
                 <p>
                   
-                  <b style="margin-right:15px;">用户类型:</b>1-业务员
+                  <b style="margin-right:15px;">角色类型:</b>${userdetail.roletype}
           </p>
                 <p><b style="margin-right:15px;">审核员身份证号码:</b>371325194568978986
                   </p>
@@ -500,14 +346,22 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                   <button type="button" class="btn btn-info btn-lg my-1"><i class="la la-paper-plane-o"></i>&nbsp;审核通过</button>
                 </div>-->
               </div> <div class="buttons block">
-                      <button type="button" class="btn btn-info duallistbox-add">审核通过</button>
-                      <button type="button" class="btn btn-info duallistbox-add-clear" style="margin-left:20px;background:#FF4961;border-color:#FF4961!important;">暂不通过</button>
+            <button class="btn btn-info duallistbox-add-clear" onclick="passcheck(${userdetail.id})">审核通过</button>
+                      <button type="button" class="btn btn-info duallistbox-add-clear" style="margin-left:20px;background:#FF4961;border-color:#FF4961!important;" onclick="goback()">暂不通过</button>
                     </div>
             </div>
+          <script>
+            function passcheck(userid){
+                window.location="passcheck/"+userid;
+            }
+            function goback(){
+                window.history.go(-1);
+            }
+          </script>
             <!--/ Invoice Footer -->
             
           
-          </div>
+
         </section>
       </div>
     </div>

@@ -15,19 +15,18 @@ import com.mindata.blockchain.socket.client.PacketSender;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import com.mindata.blockchain.core.repository.UserRepository;
 import com.mindata.blockchain.core.bean.BaseData;
 import com.mindata.blockchain.core.bean.ResultGenerator;
 import com.mindata.blockchain.core.requestbody.BlockRequestBody;
 import com.mindata.blockchain.core.requestbody.InstructionBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -125,7 +124,7 @@ public class UserController {
         return "login-advanced";
     }
     @RequestMapping(value = "/userlogin",method = RequestMethod.POST)
-    public String userLogin(@RequestParam("idnumber") String idnumber,@RequestParam("password") String password){
+    public ModelAndView userLogin(@RequestParam("idnumber") String idnumber, @RequestParam("password") String password,ModelAndView model){
         //HttpSession session=request.getSession();
         System.out.println(idnumber);
         UserEntity userEntity=new UserEntity();
@@ -137,12 +136,21 @@ public class UserController {
         System.out.println(loginuser.getPassword()+"=============="+password);
         if (loginuser.getPassword().equals(password)){
             //session.setAttribute("currentuserid",loginuser.getId());
-            return "index";
+            UserEntity checkuser=new UserEntity();
+            checkuser.setIfcheck("0");
+            checkuser.setUpdateTime(null);
+            Example<UserEntity> example1=Example.of(checkuser);
+            List<UserEntity> userEntityList=userManager.findAll(example1);
+            System.out.println(userEntityList);
+            model.addObject("userlist",userEntityList);
+            model.setViewName("index");
+        }
+            else {
+            model.setViewName("login-advanced");
         }
 
-            return "login-advanced";
 
-
+            return model;
     }
     @RequestMapping(value = "/revisepassword",method = RequestMethod.POST)
     public String revisePassword(@RequestParam("currentpassword") String currentpassword,@RequestParam("newpassword") String newpassword,@RequestParam("newpassword1") String newpassword1){
@@ -169,5 +177,46 @@ public class UserController {
         blockService.addBlock(blockRequestBody);
         System.out.print(blockBody.toString());
         return "login-advanced";
+    }
+    @RequestMapping(value = "/showuserdetail/{id}",method = RequestMethod.GET)
+    public ModelAndView showUserDetail(@PathVariable("id") Long id,ModelAndView model){
+        //System.out.println(id+"===========");
+        UserEntity userEntity=userRepository.findOne(id);
+        model.addObject("userdetail",userEntity);
+        model.setViewName("/Request_details");
+        return model;
+    }
+    @RequestMapping(value = "/passcheck/{id}",method = RequestMethod.GET)
+    public ModelAndView passCheck(@PathVariable("id") Long id,ModelAndView model){
+        InstructionBody instructionBody = new InstructionBody();
+        instructionBody.setOperation(Operation.UPDATE);
+        instructionBody.setTable("user");
+        instructionBody.setJson("{\"id\":\"" + id + "\",\"ifcheck\":\""+"1"+"\"}");
+        /*instructionBody.setPublicKey("A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54");
+        instructionBody.setPrivateKey("yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=");*/
+        instructionBody.setPublicKey(publicKey);
+        instructionBody.setPrivateKey(privateKey);
+        Instruction instruction = null;
+        try {
+            instruction = instructionService.build(instructionBody);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BlockRequestBody blockRequestBody = new BlockRequestBody();
+        blockRequestBody.setPublicKey(instructionBody.getPublicKey());
+        com.mindata.blockchain.block.BlockBody blockBody = new com.mindata.blockchain.block.BlockBody();
+        blockBody.setInstructions(CollectionUtil.newArrayList(instruction));
+        blockRequestBody.setBlockBody(blockBody);
+        blockService.addBlock(blockRequestBody);
+        System.out.print(blockBody.toString());
+        UserEntity checkuser=new UserEntity();
+        checkuser.setIfcheck("0");
+        checkuser.setUpdateTime(null);
+        Example<UserEntity> example1=Example.of(checkuser);
+        List<UserEntity> userEntityList=userManager.findAll(example1);
+        System.out.println(userEntityList);
+        model.addObject("userlist",userEntityList);
+        model.setViewName("index");
+        return model;
     }
 }

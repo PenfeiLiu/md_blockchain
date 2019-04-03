@@ -10,6 +10,9 @@ import com.mindata.blockchain.core.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Service
 public class UserSqlParser extends AbstractSqlParser<UserEntity> {
 
@@ -19,9 +22,12 @@ public class UserSqlParser extends AbstractSqlParser<UserEntity> {
     @Override
     public  void parse(byte operation, String id, UserEntity entity) {
       //  id = String.valueOf(entity.getId()) ;
-       System.out.println(entity.toString()+"------------------------------------------------------------");
+        Date day=new Date();
+
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(entity.toString()+"------------------------------------------------------------");
         if (Operation.ADD == operation) {
-          //  entity.setCreateTime(CommonUtil.getNow());
+            entity.setCreateTime(CommonUtil.getNow());
             userRepository.save(entity);
         } else if (Operation.DELETE == operation) {
            // userRepository.deleteByMessageId(messageId);
