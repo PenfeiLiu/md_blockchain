@@ -126,4 +126,37 @@ public class FileCheckData extends BaseEntity {
     public void setGetUploadManName(String getUploadManName) {
         this.getUploadManName = getUploadManName;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"licenseNum\":\"")
+                .append(licenseNum).append('\"');
+        sb.append(",\"mandatorCompany\":\"")
+                .append(mandatorCompany).append('\"');
+        sb.append(",\"tradePlatform\":\"")
+                .append(tradePlatform).append('\"');
+        sb.append(",\"tradePlatformVersion\":\"")
+                .append(tradePlatformVersion).append('\"');
+        sb.append(",\"certificationAgencyNum\":\"")
+                .append(certificationAgencyNum).append('\"');
+        sb.append(",\"certificationAgencyName\":\"")
+                .append(certificationAgencyName).append('\"');
+        sb.append(",\"fileCheckResult\":\"")
+                .append(fileCheckResult).append('\"');
+        sb.append(",\"checkTime\":\"")
+                .append(checkTime).append('\"');
+        sb.append(",\"checkManId\":\"")
+                .append(checkManId).append('\"');
+        sb.append(",\"getCheckManName\":\"")
+                .append(getCheckManName).append('\"');
+        sb.append(",\"encryptPrivateKey\":\"")
+                .append(encryptPrivateKey).append('\"');
+        sb.append(",\"uploadManId\":\"")
+                .append(uploadManId).append('\"');
+        sb.append(",\"getUploadManName\":\"")
+                .append(getUploadManName).append('\"');
+        sb.append('}');
+        return sb.toString();
+    }
 }

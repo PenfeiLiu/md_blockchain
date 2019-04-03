@@ -78,6 +78,33 @@ public class UploadCertificateDataController {
 
         return new ModelAndView("upload_Document_audit_Application").addObject(fileCheckData);
     }
+    @RequestMapping(value = "/filecheckupload",method = RequestMethod.POST)
+    public String fileCheck(@ModelAttribute("fileCheckData")FileCheckData fileCheckData){
+        //HttpSession session=request.getSession();
+        System.out.println(fileCheckData.toString());
+        InstructionBody instructionBody = new InstructionBody();
+        instructionBody.setOperation(Operation.ADD);
+        instructionBody.setTable("file_check_data");
+        instructionBody.setJson(fileCheckData.toString());
+        instructionBody.setPublicKey(publicKey);
+        instructionBody.setPrivateKey(privateKey);
+        Instruction instruction = null;
+        try {
+            instruction = instructionService.build(instructionBody);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BlockRequestBody blockRequestBody = new BlockRequestBody();
+        blockRequestBody.setPublicKey(instructionBody.getPublicKey());
+        com.mindata.blockchain.block.BlockBody blockBody = new com.mindata.blockchain.block.BlockBody();
+        blockBody.setInstructions(CollectionUtil.newArrayList(instruction));
+
+        blockRequestBody.setBlockBody(blockBody);
+        blockService.addBlock(blockRequestBody);
+
+        return "/index";
+
+    }
 
 
 }
