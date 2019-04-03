@@ -6,6 +6,7 @@ import com.mindata.blockchain.block.Instruction;
 import com.mindata.blockchain.block.Operation;
 import com.mindata.blockchain.common.utils.SubStringUtils;
 import com.mindata.blockchain.core.model.CertificateApplyData;
+import com.mindata.blockchain.core.model.CertificationData;
 import com.mindata.blockchain.core.model.FileCheckData;
 import com.mindata.blockchain.core.model.UserEntity;
 import com.mindata.blockchain.core.requestbody.BlockRequestBody;
@@ -78,6 +79,16 @@ public class UploadCertificateDataController {
 
         return new ModelAndView("upload_Document_audit_Application").addObject(fileCheckData);
     }
+
+    @RequestMapping("/uploadCertification")
+    public ModelAndView intoUploadCertificationPage(){
+        CertificationData certificationData = new CertificationData();
+
+        return new ModelAndView("upload_Certificate_data").addObject(certificationData);
+    }
+
+
+
     @RequestMapping(value = "/filecheckupload",method = RequestMethod.POST)
     public String fileCheck(@ModelAttribute("fileCheckData")FileCheckData fileCheckData){
         //HttpSession session=request.getSession();
@@ -106,5 +117,31 @@ public class UploadCertificateDataController {
 
     }
 
+    @RequestMapping(value = "/uploadCertificateData",method = RequestMethod.POST)
+    public String uploadCertificateData(@ModelAttribute("certificationData")CertificationData certificationData){
+        //HttpSession session=request.getSession();
+        System.out.println(certificationData.toString());
+        InstructionBody instructionBody = new InstructionBody();
+        instructionBody.setOperation(Operation.ADD);
+        instructionBody.setTable("certificate_data");
+        instructionBody.setJson(certificationData.toString());
+        instructionBody.setPublicKey(publicKey);
+        instructionBody.setPrivateKey(privateKey);
+        Instruction instruction = null;
+        try {
+            instruction = instructionService.build(instructionBody);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        BlockRequestBody blockRequestBody = new BlockRequestBody();
+        blockRequestBody.setPublicKey(instructionBody.getPublicKey());
+        com.mindata.blockchain.block.BlockBody blockBody = new com.mindata.blockchain.block.BlockBody();
+        blockBody.setInstructions(CollectionUtil.newArrayList(instruction));
 
+        blockRequestBody.setBlockBody(blockBody);
+        blockService.addBlock(blockRequestBody);
+
+        return "/index";
+
+    }
 }
