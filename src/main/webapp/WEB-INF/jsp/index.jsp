@@ -302,7 +302,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
           <ul class="menu-content">
               <li><a class="menu-item" href="/uploadpage" data-i18n=""> 证书申请资料上传</a> </li>
               <li><a class="menu-item" href="/uploadFile" data-i18n="">文件审核资料上传</a> </li>
-              <li><a class="menu-item" href="upload_Site_audit.jsp" data-i18n="">现场审核资料上传</a> </li>
+              <li><a class="menu-item" href="/uploadOnSiteData" data-i18n="">现场审核资料上传</a> </li>
               <li><a class="menu-item" href="/uploadCertification" data-i18n="">证书数据上传</a> </li>
               
             </ul>

@@ -5,10 +5,7 @@ import cn.hutool.core.collection.CollectionUtil;
 import com.mindata.blockchain.block.Instruction;
 import com.mindata.blockchain.block.Operation;
 import com.mindata.blockchain.common.utils.SubStringUtils;
-import com.mindata.blockchain.core.model.CertificateApplyData;
-import com.mindata.blockchain.core.model.CertificationData;
-import com.mindata.blockchain.core.model.FileCheckData;
-import com.mindata.blockchain.core.model.UserEntity;
+import com.mindata.blockchain.core.model.*;
 import com.mindata.blockchain.core.requestbody.BlockRequestBody;
 import com.mindata.blockchain.core.requestbody.InstructionBody;
 import com.mindata.blockchain.core.service.BlockService;
@@ -26,7 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 
 @Controller
-public class UploadCertificateDataController {
+public class UploadCertificateDataController {//数据上传所有功能模块
     @Value("${publicKey:A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54}")
     private String publicKey;
     @Value("${privateKey:yScdp6fNgUU+cRUTygvJG4EBhDKmOMRrK4XJ9mKVQJ8=}")
@@ -66,25 +63,32 @@ public class UploadCertificateDataController {
 
     }
 
-    @RequestMapping("/uploadpage")
+    @RequestMapping("/uploadpage")//证书申请资料上传
     public ModelAndView intoUploadPage(){
         CertificateApplyData certificateApplyData = new CertificateApplyData();
 
         return new ModelAndView("upload_Certificate_Application").addObject(certificateApplyData);
     }
 
-    @RequestMapping("/uploadFile")
+    @RequestMapping("/uploadFile")//文件审核资料上传
     public ModelAndView intoUploadFile(){
         FileCheckData fileCheckData = new FileCheckData();
 
         return new ModelAndView("upload_Document_audit_Application").addObject(fileCheckData);
     }
 
-    @RequestMapping("/uploadCertification")
+    @RequestMapping("/uploadCertification")//证书数据上传
     public ModelAndView intoUploadCertificationPage(){
         CertificationData certificationData = new CertificationData();
 
         return new ModelAndView("upload_Certificate_data").addObject(certificationData);
+    }
+
+    @RequestMapping("/uploadOnSiteData")//现场审核资料上传
+    public ModelAndView intoUploadOnSitePage(){
+        OnSiteAuditData onSiteAuditData = new OnSiteAuditData();
+
+        return new ModelAndView("upload_Site_audit").addObject(onSiteAuditData);
     }
 
 
