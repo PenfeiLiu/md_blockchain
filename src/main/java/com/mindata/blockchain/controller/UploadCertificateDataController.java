@@ -61,6 +61,13 @@ public class UploadCertificateDataController {//数据上传所有功能模块
         return new ModelAndView("upload_Detection").addObject(detectionData);
     }
 
+    @RequestMapping("/tryRunPage")//检测检验上传页面
+    public ModelAndView intoTryRunPage(){
+        DetectionData detectionData = new DetectionData();
+
+        return new ModelAndView("upload_test_run").addObject(detectionData);
+    }
+
     @RequestMapping(value = "/applyCertificateUpdate",method = RequestMethod.POST)
     public String applyCertificateUpdate(@ModelAttribute("certificateApplyData")CertificateApplyData certificateApplyData,Model model){
         //HttpSession session=request.getSession();

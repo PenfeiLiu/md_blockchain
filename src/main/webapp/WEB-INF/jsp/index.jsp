@@ -312,7 +312,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
          <li><a class="menu-item" href="" data-i18n="">检测检验数据上传</a>
           <ul class="menu-content">
               <li><a class="menu-item" href="/detectionPage" data-i18n=""> 检测检验上传</a> </li>
-              <li><a class="menu-item" href="/detectionPage" data-i18n="">试运行数据上传</a> </li>
+              <li><a class="menu-item" href="/tryRunPage" data-i18n="">试运行数据上传</a> </li>
              
               
             </ul>

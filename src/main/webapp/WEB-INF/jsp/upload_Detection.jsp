@@ -557,11 +557,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           </div>
                         </div>
                         
-                      
-                      
-                      
-                 
-                      
+
                         
                       </div>
                       <div class="form-actions right"> <input value="保存" type="submit" class="btn btn-primary mr-1" style="margin:0 0 0 214px;padding-left:40px; padding-right:40px;">
