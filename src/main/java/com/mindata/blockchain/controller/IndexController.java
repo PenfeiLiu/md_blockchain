@@ -1,17 +1,10 @@
 package com.mindata.blockchain.controller;
 
-import cn.hutool.core.collection.CollectionUtil;
-import com.mindata.blockchain.block.Instruction;
-import com.mindata.blockchain.block.Operation;
 import com.mindata.blockchain.block.check.BlockChecker;
-import com.mindata.blockchain.core.bean.BaseData;
-import com.mindata.blockchain.core.bean.ResultGenerator;
 import com.mindata.blockchain.core.manager.DbBlockManager;
 import com.mindata.blockchain.core.manager.MessageManager;
 import com.mindata.blockchain.core.manager.SyncManager;
 import com.mindata.blockchain.core.repository.UserRepository;
-import com.mindata.blockchain.core.requestbody.BlockRequestBody;
-import com.mindata.blockchain.core.requestbody.InstructionBody;
 import com.mindata.blockchain.core.service.BlockService;
 import com.mindata.blockchain.core.service.InstructionService;
 import com.mindata.blockchain.socket.client.PacketSender;
@@ -76,7 +69,7 @@ public class IndexController {
 //        blockRequestBody.setBlockBody(blockBody);
 //        blockService.addBlock(blockRequestBody);
 //        System.out.print(blockBody.toString());
-        return "login-advanced";
+        return "login";
 
     }
     @RequestMapping("/showcharts")

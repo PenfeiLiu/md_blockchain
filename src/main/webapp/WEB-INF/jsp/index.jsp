@@ -101,7 +101,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                 <a class="dropdown-item" href="#"><i class="ft-mail"></i> 个人信息</a>
                 <a class="dropdown-item" href="#"><i class="ft-check-square"></i>个人信息</a>
                 <a class="dropdown-item" href="#"><i class="ft-message-square"></i> 个人信息</a>
-                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="ft-power"></i> 退 出</a>
+                <div class="dropdown-divider"></div><a class="dropdown-item" href="/logout"><i class="ft-power"></i> 退 出</a>
               </div>
             </li>
             

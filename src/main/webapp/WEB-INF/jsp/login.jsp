@@ -93,7 +93,7 @@ data-open="click" data-menu="vertical-menu" data-col="1-column">
                   <div class="card-body">
                     <form class="form-horizontal" action="/userlogin" method="post">
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="text" class="form-control input-lg" id="idnumber" name="idnumber" placeholder="姓名"
+                        <input type="text" class="form-control input-lg" id="username" name="username" placeholder="姓名"
                         tabindex="1" required data-validation-required-message="请输入帐户名">
                         <div class="form-control-position">
                           <i class="ft-user"></i>

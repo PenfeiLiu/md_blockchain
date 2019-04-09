@@ -18,7 +18,7 @@ public class BaseEntity {
 
     private Long createTime;
 
-    private Long updateTime = CommonUtil.getNow();
+    private Long updateTime;
     /**
      * 最后操作人
      */

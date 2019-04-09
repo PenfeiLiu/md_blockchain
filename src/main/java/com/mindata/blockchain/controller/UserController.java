@@ -12,20 +12,22 @@ import com.mindata.blockchain.core.repository.UserRepository;
 import com.mindata.blockchain.core.service.BlockService;
 import com.mindata.blockchain.core.service.InstructionService;
 import com.mindata.blockchain.socket.client.PacketSender;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresRoles;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import com.mindata.blockchain.core.repository.UserRepository;
-import com.mindata.blockchain.core.bean.BaseData;
-import com.mindata.blockchain.core.bean.ResultGenerator;
 import com.mindata.blockchain.core.requestbody.BlockRequestBody;
 import com.mindata.blockchain.core.requestbody.InstructionBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -92,7 +94,7 @@ public class UserController {
         blockRequestBody.setBlockBody(blockBody);
         blockService.addBlock(blockRequestBody);
         System.out.print(blockBody.toString());
-        return "login-simple";
+        return "login";
     }
     @RequestMapping(value="/userregister",method = RequestMethod.POST)
     public String register(@RequestParam("unitno") String unitno,@RequestParam("unittype") String unittype,@RequestParam("usertype") String usertype,@RequestParam("roletype") String roletype,@RequestParam("idnumber") String idnumber,@RequestParam("name") String name,@RequestParam("password") String password,@RequestParam("password1") String password1)
@@ -121,21 +123,30 @@ public class UserController {
         blockRequestBody.setBlockBody(blockBody);
         blockService.addBlock(blockRequestBody);
         System.out.print(blockBody.toString());
-        return "login-advanced";
+        return "login";
     }
     @RequestMapping(value = "/userlogin",method = RequestMethod.POST)
-    public ModelAndView userLogin(@RequestParam("idnumber") String idnumber, @RequestParam("password") String password,ModelAndView model){
+    public ModelAndView userLogin(@RequestParam("username") String username, @RequestParam("password") String password,ModelAndView model){
         //HttpSession session=request.getSession();
-        System.out.println(idnumber);
-        UserEntity userEntity=new UserEntity();
-        userEntity.setIdnumber(idnumber);
-        userEntity.setUpdateTime(null);
-        System.out.println(userEntity);
-        Example<UserEntity> example= Example.of(userEntity);
-        UserEntity loginuser= userManager.findOne(example);
-        System.out.println(loginuser.getPassword()+"=============="+password);
-        if (loginuser.getPassword().equals(password)){
-            //session.setAttribute("currentuserid",loginuser.getId());
+        UsernamePasswordToken token=new UsernamePasswordToken(username,password);
+         Subject subject= SecurityUtils.getSubject();
+        String error=null;
+
+        try {
+            subject.login(token);
+        } catch (UnknownAccountException e) {
+            error = "用户名/密码错误";
+        } catch (IncorrectCredentialsException e) {
+            error = "用户名/密码错误";
+        } catch (AuthenticationException e) {
+            //其他错误，比如锁定，如果想单独处理请单独catch处理
+            error = "其他错误：" + e.getMessage();
+        }
+        System.out.println("------------------------------error:"+error);
+
+        if(error != null) {//出错了，返回登录页面
+            model.setViewName("login");;
+        } else {//登录成功
             UserEntity checkuser=new UserEntity();
             checkuser.setIfcheck("0");
             checkuser.setUpdateTime(null);
@@ -145,10 +156,6 @@ public class UserController {
             model.addObject("userlist",userEntityList);
             model.setViewName("index");
         }
-            else {
-            model.setViewName("login-advanced");
-        }
-
 
             return model;
     }
@@ -176,7 +183,7 @@ public class UserController {
         blockRequestBody.setBlockBody(blockBody);
         blockService.addBlock(blockRequestBody);
         System.out.print(blockBody.toString());
-        return "login-advanced";
+        return "login";
     }
     @RequestMapping(value = "/showuserdetail/{id}",method = RequestMethod.GET)
     public ModelAndView showUserDetail(@PathVariable("id") Long id,ModelAndView model){
@@ -186,6 +193,7 @@ public class UserController {
         model.setViewName("/Request_details");
         return model;
     }
+    @RequiresRoles("admin")
     @RequestMapping(value = "/passcheck/{id}",method = RequestMethod.GET)
     public ModelAndView passCheck(@PathVariable("id") Long id,ModelAndView model){
         InstructionBody instructionBody = new InstructionBody();
